@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reedmoor Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#faq"></a>ЧаВо</li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="left-section">
+            <img src="images/avatar.png" alt="Reedmoor" class="avatar">
+            <h1>Reedmoor</h1>
+        </div>
+        <div class="right-section">
+            <h2>Обо мне</h2>
+            <p class="descriptive-text">Есть опыт в программировании на Python, C++ и разработке сайтов со стеком NodeJS+HTML+CSS.
+            Также имеется опыт в разработке интерфейсов на PyQt 5, на нем сделан интерфейс Конфигуратора ПК, а также все анимации и интерфейс игры Stardefender.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div>
+            <h2>Мои навыки</h2>
+            <p>Технологии с которыми я работал:</p>
+            <ul>
+                <li>- Python</li>
+                <li>- JavaScript</li>
+                <li>- React Native</li>
+                <li>- C++</li>
+                <li>- Node.js</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h1>Проекты</h1>
+        <div class="slider-container">
+            <button class="prev-button">&lt;</button>
+        
+            <div class="slider-content">
+                <div class="image-panel">
+                    <img id="slider-image" src="images/photo1.png" alt="Image 1" class="slider-img">
+                </div>
+        
+                <div class="text-panel">
+                    <div id="slider-text">
+                        <h2>Title 1</h2>
+                        <p>Description for image 1.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <button class="next-button">&gt;</button>
+        </div>
+        <script src="script.js"></script>
+    </section>
+    
+    <section id="contacts">
+        <button class="send-me-message" onclick="showPopup()">Отправить мне сообщение</button>
+        <div class="social-links">
+            <a href="https://github.com/Reedmoor"><img src="images/github-icon.png" alt="GitHub"></a>
+            <a href="#"><img src="images/telegram-icon.png" alt="Telegram"></a>
+            <a href="https://vk.com/reedmoor"><img src="images/vk-icon.png" alt="VK"></a>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div>
+            <h2>Часто задаваемые вопросы</h2>
+            <h3>На каких технологиях вы специализируетесь?</h3>
+            <p>Я специализируюсь на Python, C++, React native и Node.js для разработки веб-сайтов и игр.</p>
+            
+            <h3>Можете ли вы помочь с консультацией по компонентам ПК?</h3>
+            <p>Да, я могу дать совет по сборке и настройке ПК для различных нужд.</p>
+        </div>
+    </section>
+    
+    
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div id="modal-content" class="modal-content">
+        <button class="close" onclick="hidePopup()">&times;</button>
+        <h2>Свяжитесь со мной</h2>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" required placeholder="Имя"><br><br>
+
+            <input type="email" id="email" name="email" required placeholder="Email"><br><br>
+
+            <textarea id="message" name="message" required placeholder="Сообщение"></textarea><br><br>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<script src="modal.js"></script> <!-- Подключение файла modal.js -->
+
+
+</body>
+</html>
